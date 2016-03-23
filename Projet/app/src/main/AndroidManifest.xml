@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.alex.projet">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Projet"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Accueil">
+            <intent-filter android:label="Accueil">
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Zone"
+            android:label="Zone" />
+
+        <intent-filter android:label="Zone">
+            <action android:name="android.intent.action.ZONE" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
+        <activity
+            android:name=".chat"
+            android:label="Zone: nom de la zone" />
+
+        <intent-filter android:label="Chat">
+            <action android:name="android.intent.action.CHAT" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
+        <activity android:name=".hors_zone" />
+        <activity android:name=".Settings" />
+        <activity android:name=".Liste_usagers"></activity>
+    </application>
+
+</manifest>
