@@ -34,7 +34,7 @@ public class Accueil extends AppCompatActivity implements View.OnClickListener {
         ok = (Button) findViewById(R.id.button_ok);
         String s = editText.getText().toString();
 
-        if(s.equals("") || s.equals("Pseudonyme")){
+        if(s.trim().equals("")){
             ok.setEnabled(false);
         }else{
             ok.setEnabled(true);
