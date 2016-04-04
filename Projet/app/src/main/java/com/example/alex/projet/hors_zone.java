@@ -23,7 +23,7 @@ public class hors_zone extends AppCompatActivity implements View.OnClickListener
     public void onClick(View v) {
 
         //setContentView(R.layout.activity_chat);
-        Intent intent = new Intent(hors_zone.this, chat.class);
+        Intent intent = new Intent(hors_zone.this, Chat.class);
         this.startActivity(intent);
     }
 }

@@ -18,7 +18,7 @@
         android:text=""
         android:hint="@string/hint_pseudo"
         android:ems="10"
-        android:id="@+id/pseudonyme"
+        android:id="@+id/pseudo"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="85dp"
@@ -28,8 +28,8 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="OK"
-        android:id="@+id/button_ok"
+        android:text="@string/confirm_pseudo"
+        android:id="@+id/btn_confirm"
         android:layout_marginBottom="79dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
@@ -37,11 +37,11 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Recevoir une notification avant de quitter la zone actuelle"
+        android:text="@string/notif_zone"
         android:id="@+id/checkBox"
         android:checked="true"
         android:textSize="14dp"
-        android:layout_below="@+id/pseudonyme"
-        android:layout_alignLeft="@+id/pseudonyme"
-        android:layout_alignStart="@+id/pseudonyme" />
+        android:layout_below="@+id/pseudo"
+        android:layout_alignLeft="@+id/pseudo"
+        android:layout_alignStart="@+id/pseudo" />
 </RelativeLayout>

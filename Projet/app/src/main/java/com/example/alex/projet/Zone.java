@@ -23,7 +23,7 @@ public class Zone extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v) {
 
         //setContentView(R.layout.activity_chat);
-        Intent intent = new Intent(Zone.this, chat.class);
+        Intent intent = new Intent(Zone.this, Chat.class);
         this.startActivity(intent);
     }
 }

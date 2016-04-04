@@ -27,9 +27,12 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
 
+
+
         <activity
-            android:name=".chat"
-            android:label="Zone: nom de la zone" />
+            android:name=".Chat"
+            android:label="Zone: nom de la zone"/>
+
 
         <intent-filter android:label="Chat" >
             <action android:name="android.intent.action.CHAT" />

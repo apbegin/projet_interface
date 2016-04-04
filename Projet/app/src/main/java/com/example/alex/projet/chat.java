@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class chat extends AppCompatActivity {
+public class Chat extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,9 +19,10 @@ public class chat extends AppCompatActivity {
         return true;
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch(item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.settings:
                 startActivity(new Intent(this, Settings.class));
                 return true;
@@ -33,6 +34,8 @@ public class chat extends AppCompatActivity {
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
+
         }
     }
+
 }

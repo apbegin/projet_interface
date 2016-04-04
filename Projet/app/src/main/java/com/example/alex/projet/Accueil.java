@@ -1,6 +1,7 @@
 package com.example.alex.projet;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
@@ -9,10 +10,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+
 public class Accueil extends AppCompatActivity implements View.OnClickListener {
 
-    Button ok;
-    EditText editText;
+    Button btnConfirm;
+    EditText txtPseudo;
+
+    private String mUsername;
+    private SharedPreferences prefs;
+
 
     private TextWatcher mTextWatcher = new TextWatcher(){
 
@@ -31,13 +37,13 @@ public class Accueil extends AppCompatActivity implements View.OnClickListener {
     };
 
     void checkFieldsForEmptyValues(){
-        ok = (Button) findViewById(R.id.button_ok);
-        String s = editText.getText().toString();
+        btnConfirm = (Button) findViewById(R.id.btn_confirm);
+        String s = txtPseudo.getText().toString();
 
         if(s.trim().equals("")){
-            ok.setEnabled(false);
+            btnConfirm.setEnabled(false);
         }else{
-            ok.setEnabled(true);
+            btnConfirm.setEnabled(true);
         }
     }
 
@@ -45,17 +51,34 @@ public class Accueil extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accueil);
-        editText = (EditText) findViewById(R.id.pseudonyme);
+        txtPseudo = (EditText) findViewById(R.id.pseudo);
 
-        editText.addTextChangedListener(mTextWatcher);
+        txtPseudo.addTextChangedListener(mTextWatcher);
         checkFieldsForEmptyValues();
 
-        ok.setOnClickListener(this);
+        btnConfirm.setOnClickListener(this);
+
+        if(getUsername()) {
+            txtPseudo.setText(mUsername);
+        }
     }
 
     @Override
     public void onClick(View v) {
+        setUsername();
+
         Intent intent = new Intent(Accueil.this, Zone.class);
         this.startActivity(intent);
+    }
+
+    private Boolean getUsername(){
+        prefs = getApplication().getSharedPreferences("chatPrefs",0);
+        mUsername = prefs.getString("username", null);
+        return mUsername != null;
+    }
+
+    private void setUsername(){
+        mUsername = txtPseudo.getText().toString();
+        prefs.edit().putString("username", mUsername).commit();
     }
 }
