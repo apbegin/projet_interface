@@ -59,3 +59,6 @@ public class Accueil extends AppCompatActivity implements View.OnClickListener {
         this.startActivity(intent);
     }
 }
+
+//TODO: faire en sorte qu'on ne puisse pas faire back de ((Chat vers Zone)) et ((Zone vers Accueil
+
