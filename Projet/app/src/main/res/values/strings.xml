@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">Projet</string>
-    <string name="hint_pseudo">Pseudonyme</string>
-    <string name="notif_zone">Recevoir une notification avant de quitter la zone actuelle</string>
-    <string name="confirm_pseudo">Confirmer</string>
-</resources>

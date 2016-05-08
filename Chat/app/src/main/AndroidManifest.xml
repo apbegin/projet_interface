@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ift2905.chat" >
+
+    <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:label="GlobalChat">
+        <activity android:name=".AccueilActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ZoneActivity"
+            android:label="Zone" />
+
+        <intent-filter android:label="Zone" >
+            <action android:name="android.intent.action.ZONE" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
+        <activity
+            android:name=".ChatRoomActivity"
+            android:label="Global"/>
+
+        <intent-filter android:label="Chat" >
+            <action android:name="android.intent.action.CHAT" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
+        <activity android:name=".HorsZoneActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity
+            android:name=".ListeUsagersActivity"
+            android:label="Liste des usagers"/>
+        <activity
+            android:name=".CarteActivity"
+            android:label="Carte"/>
+
+        <!--Doit demeurer a la fin du fichier XML (avant </application>)-->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyADUv_ogUZWpBjS0E2r6nJirOG_2bTyRZA"/>
+        <!--Doit demeurer a la fin du fichier XML (avant </application>)-->
+    </application>
+
+</manifest>

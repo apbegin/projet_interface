@@ -1,1 +1,13 @@
-test/Nouveau document texte.txt
+*.iml
+.idea
+#.idea/workspace.xml
+.gradle
+build/
+.DS_Store
+Thumbs.db
+local.properties
+bin/
+gen/
+*.apk
+*.ap_
+
